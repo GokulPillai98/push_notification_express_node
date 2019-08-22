@@ -1,0 +1,70 @@
+//BEGIN :: Import of partials and commons
+@import '../../styles/scss/reset';
+@import '../../styles/scss/variables';
+@import '../../styles/scss/mixins';
+@import '../../styles/scss/commons';
+//END :: Import of partials and commons
+
+//Your scss code goes here uncomment and add your code below
+.timer-section{
+           
+    font-family: $fontRobotoCondensed;
+
+    .timer-container{
+        text-align: center;
+        margin-bottom: 50px;
+
+        div{
+            display: inline-block;
+        }
+
+        .time{
+            font-size : 15vw;
+        }
+
+        .suffix{
+            font-size: 3vw;
+            padding-right: 5%;
+            @media screen and (max-width:$mobileBreakPoint){
+                padding-right: 4%;
+            }
+        }
+
+        .days{
+            color: $colorPurple;
+        }
+
+        .hours{
+            color: $colorDarkYellow;
+        }
+
+        .mins{
+            color: $colorDullPink;
+        }
+
+        .secs{
+            color: $colorBrightYellow;
+            padding-right: 0;
+        }
+
+        .hash-tag-symb,.hash-tag-allspark,.hash-tag-tx{
+            font-size : 15vw;  
+        }
+
+        .hash-tag-symb{
+            color: $colorDullYellow;
+        }
+
+        .hash-tag-allspark{
+            color: $colorDarkPurple; 
+        }
+
+        .hash-tag-tx{
+            color: $colorDullPink;
+        }
+        @media screen and (max-width:$mobileBreakPoint){
+            margin-bottom: 30px;
+        }
+    }
+    
+}

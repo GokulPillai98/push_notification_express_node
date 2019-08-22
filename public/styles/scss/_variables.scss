@@ -1,0 +1,40 @@
+@font-face{
+    font-family: 'Century Gothic';
+    src: url('../../fonts/CenturyGothic.ttf');
+}
+
+//BEGIN :: Font Stack
+$fontCenturyGothic : 'Century Gothic';
+$fontRobotoCondensed : 'Roboto Condensed',
+sans-serif;
+//END :: Font stack
+
+//BEGIN :: Color Code
+$primary-blue : #4DA8F2;
+$primary-red : #D71A25;
+
+$secondary-yellow : #F8F3AC;
+$secondary-grey-brown : #D6CFC1;
+
+$theme-black : #111;
+$theme-white : #fff;
+
+$theme-sandle-orange : #f9c7a2;
+$theme-light-blue : #21c2ee;
+
+
+$facebook-blue : #365395;
+$twitter-blue : #55ADF1;
+
+//END :: Color Code
+
+
+
+//BEGIN :: Padding break points;
+$sectionPadding : 10%;
+$sectionPaddingMobile : 5%;
+
+
+//BEGIN :: Responsive breakpoints
+$mobileBreakPoint : 767px;
+//END :: Responsive breakpoints

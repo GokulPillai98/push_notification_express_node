@@ -1,0 +1,50 @@
+@import 'variables';
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $fontRobotoCondensed;
+}
+.clear-div{
+    clear: both;
+}
+.session-selector-wrapper{
+    
+    .section-heading{
+        margin-top: 30px;
+        text-align: center;
+        img{
+            height: 150px;
+        }
+    }
+    .selector-container{
+        width: 20%;
+        margin: 70px auto 0;
+        color: $colorPurple;
+        font-size: 20px;
+        div{
+            margin-bottom: 10px;
+        }
+        .label-left-container{
+            float: left;
+            width: 60%;
+        }
+        .select-right-container{
+            float: left;
+            text-align: left;
+            select{
+                width: 100%;
+            }
+        }
+        button{
+            width: 100%;
+            margin: 20px auto 0;
+            padding: 10px 20px;
+            background-color: $colorDullPink;
+            color: $colorLightYellow;
+            font-size: 20px;
+            border: 0;
+            cursor: pointer;   
+        }
+    }
+}

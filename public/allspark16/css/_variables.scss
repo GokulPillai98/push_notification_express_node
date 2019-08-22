@@ -1,0 +1,77 @@
+$theme-red      : #E20250;
+$theme-blue     : #039EDF;
+$theme-orange   : #F19401;
+$theme-green    : #0BA35A;
+$theme-darkred	: #a40039;
+$theme-white    : #ffffff;
+$theme-black    : #111111;
+
+$theme-red-alpha : rgba(226,2,80,0.5);
+$theme-blue-alpha : rgba(3,158,223,0.5);
+$theme-green-alpha : rgba(11,163,90,0.5);
+$theme-orange-alpha : rgba(241,148,1,0.5);
+
+
+$thin : "Lato-Thin";
+$light : "Lato-Light";
+$normal : "Lato-Regular";
+$bold : "Lato-Bold";
+
+$small-mobile: 322px;
+$mobile: 700px;
+$tablet: 800px;
+
+@mixin clearFloat{
+    width: 100%; float: none;
+}
+
+.link{
+    &:link, &:hover, &:visited{
+        color: $theme-white;
+        text-decoration: none;
+    }
+}
+.allSparkBgs{
+    &:nth-child(1){
+        background: $theme-orange;
+    }
+    &:nth-child(2){
+        background: $theme-blue;
+    }
+    &:nth-child(3){
+        background: $theme-green;
+    }
+    &:nth-child(4){
+        background: $theme-red;
+    }
+}
+
+.allSparkFullBgs{
+    &.orange{
+        background: $theme-orange;
+    }
+    &.blue{
+        background: $theme-blue;
+    }
+    &.green{
+        background: $theme-green;
+    }
+    &.red{
+        background: $theme-red;
+    }
+}
+
+.allSparkAlphaBgs{
+    &.orange{
+        background: $theme-orange-alpha;
+    }
+    &.blue{
+        background: $theme-blue-alpha;
+    }
+    &.green{
+        background: $theme-green-alpha;
+    }
+    &.red{
+        background: $theme-red-alpha;
+    }
+}

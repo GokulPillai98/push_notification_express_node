@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="272px" height="340px" viewBox="0 0 272 340" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>Group 3</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="69.2101149%" y1="-1.10850834%" x2="27.6700809%" y2="87.7675137%" id="linearGradient-1">
+            <stop stop-color="#00C2F1" offset="0%"></stop>
+            <stop stop-color="#00C2F1" offset="100%"></stop>
+        </linearGradient>
+        <polygon id="path-2" points="4.54747351e-13 463.155274 370.159956 0.343768843 450 0.343768843 127.283721 598.834606"></polygon>
+    </defs>
+    <g id="Website" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD" transform="translate(-1168.000000, -6103.000000)">
+            <g id="Footer" transform="translate(-176.000000, 5686.000000)">
+                <g id="Group-3" transform="translate(1539.245899, 631.500000) scale(-1, 1) translate(-1539.245899, -631.500000) translate(1314.245899, 332.000000)">
+                    <g id="Group" transform="translate(225.000000, 299.500000) scale(-1, 1) translate(-225.000000, -299.500000) ">
+                        <g id="Path-2-+-Path-2-+-Path-2-+-Path-2-+-Path-2-+-Path-2-Mask">
+                            <mask id="mask-3" fill="white">
+                                <use xlink:href="#path-2"></use>
+                            </mask>
+                            <path stroke="#111111" stroke-width="2" d="M1.32222349,463.103113 L127.062742,597.137452 L448.324669,1.34376884 L370.640653,1.34376884 L1.32222349,463.103113 Z"></path>
+                            <path d="M31,462 L358,36" id="Path-2" stroke="#111111" stroke-width="2" mask="url(#mask-3)"></path>
+                            <path d="M54,467 L340,78" id="Path-2" stroke="#111111" stroke-width="2" mask="url(#mask-3)"></path>
+                            <path d="M73.1140233,463.859148 L355.850596,94.1497613" id="Path-2" stroke="#111111" stroke-width="2" mask="url(#mask-3)" transform="translate(214.406101, 278.664446) rotate(-3.000000) translate(-214.406101, -278.664446) "></path>
+                            <path d="M97.7317466,467.65017 L349.253371,120.337814" id="Path-2" stroke="#111111" stroke-width="2" mask="url(#mask-3)" transform="translate(223.610991, 293.854909) rotate(-3.000000) translate(-223.610991, -293.854909) "></path>
+                            <path d="M125.856243,466.810177 L343.121841,155.206808" id="Path-2" stroke="#111111" stroke-width="2" mask="url(#mask-3)" transform="translate(234.372924, 310.847349) rotate(-4.000000) translate(-234.372924, -310.847349) "></path>
+                            <path d="M153.715124,462.587418 L359.313721,166.379354" id="Path-2" stroke="#111111" stroke-width="2" mask="url(#mask-3)" transform="translate(256.697475, 314.656857) rotate(-5.000000) translate(-256.697475, -314.656857) "></path>
+                        </g>
+                    </g>
+                    <circle id="Oval" stroke="#111111" stroke-width="2" fill="#A5F982" cx="226" cy="266" r="9"></circle>
+                    <circle id="Oval" stroke="#111111" stroke-width="2" fill="#FFA200" cx="195" cy="170" r="7"></circle>
+                    <circle id="Oval" stroke="#111111" stroke-width="2" fill="#FAB0B4" cx="322.5" cy="367.5" r="10.5"></circle>
+                    <circle id="Oval" stroke="#111111" stroke-width="2" fill="#C4C7D9" cx="184.5" cy="341.5" r="10.5"></circle>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

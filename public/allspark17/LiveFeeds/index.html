@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <link href="bower_components/social-feed/css/jquery.socialfeed.css" rel="stylesheet" type="text/css">
+        <link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="social-feed-container"></div>
+
+        <script src="bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="bower_components/codebird-js/codebird.js"></script>
+        <script src="bower_components/doT/doT.min.js"></script>
+        <script src="bower_components/moment/min/moment.min.js"></script>
+        <script src="bower_components/moment/locale/it.js"></script>
+        <script src="bower_components/social-feed/js/jquery.socialfeed.js"></script>
+
+        <script type="text/javascript">
+
+            function getSocialFeeds(limits){
+                $('.social-feed-container').socialfeed({
+                    facebook:{
+                        accounts: ['@allsparktx','!allsparktx'],  //Array: Specify a list of accounts from which to pull wall posts
+                        limit: limits,                                   //Integer: max number of posts to load
+                        access_token: '916263538460077|7798c8f65f551c6fe6c81c5b30077b97'  //String: "APP_ID|APP_SECRET"
+                    },
+
+                    twitter:{
+                        accounts: ['#allsparktx',"#allspark2k16","allspark2016","@allsparktx"],//,"#HighSchoolIn5Words"],                      //Array: Specify a list of accounts from which to pull tweets
+                        limit: limits,                                   //Integer: max number of tweets to load
+                        consumer_key: 'KylSc1fVdJjrhwpTfJR94sWdn',          //String: consumer key. make sure to have your app read-only
+                        consumer_secret: 'jVAeQXeuTsGY9EO2duXiOIZIlcMDyX2kQKHucOjemmsAtgwDSw',//String: consumer secret key. make sure to have your app read-only
+                    },
+
+                    // GENERAL SETTINGS
+                    length : 400,                                     //Integer: For posts with text longer than this length, show an ellipsis.
+                    show_media:true,                                //Boolean: if false, doesn't display any post images
+                    media_min_width: 0,                           //Integer: Only get posts with images larger than this value
+                    update_period: 3000,                            //Integer: Number of seconds before social-feed will attempt to load new posts.
+                    template: "post.html",                         //String: Filename used to get the post template.
+                    moderation: function(content) {                 //Function: if returns false, template will have class hidden
+                        return true;
+                    },
+                    callback: function() {                          //Function: This is a callback function which is evoked when all the posts are collected and displayed
+                        console.log("All posts collected!");
+                        
+                    }
+                });
+            }
+            var limits = 7;
+            //setInterval(function(){
+               // if(limits==3) limits = 4;
+                //else limits = 9;
+              //  console.log("Limits " + limits);
+              // getSocialFeeds(limits);
+
+            //}, 5000);
+
+
+           getSocialFeeds(9);
+
+
+        </script>
+    </body>
+</html>

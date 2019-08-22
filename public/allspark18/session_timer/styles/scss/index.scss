@@ -1,0 +1,140 @@
+@import 'variables';
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $fontRobotoCondensed;
+}
+
+.session-timeline-main-wrapper{
+
+    //BEGIN :: Session-Timer-intimation properties
+    .five-minute-intimation{
+        background: $colorLightYellow ;
+    }
+    
+    .two-minute-intimation{
+        animation: blink 1s ease-in-out infinite;
+        @keyframes blink {
+            50%{
+                background: $colorLightRed ;
+            }
+            100%{
+                background: $colorWhite;
+            }
+        }
+    }
+    //END :: Session-Timer-intimation properties
+
+    //BEGIN :: Selector-container properties
+    .selector-container{
+        width: 20%;
+        margin: 70px auto 0;
+        color: $colorPurple;
+        font-size: 20px;
+        div{
+            margin-bottom: 10px;
+        }
+        .label-left-container{
+            float: left;
+            width: 40%;
+        }
+        .select-right-container{
+            float: left;
+            width: 60%;
+            select{
+                width: 100%;
+                font-size: 14px;
+            }
+        }
+        .duration-container{
+            float: left;
+            text-align: left;
+        }
+        button{
+            width: 100%;
+            margin: 20px auto 0;
+            padding: 10px 20px;
+            background-color: $colorDullPink;
+            color: $colorLightYellow;
+            font-size: 20px;
+            border: 0;
+            cursor: pointer;   
+        }
+    }
+    //END :: Selector-container properties
+
+    //BEGIN :: Session-Timer-section-heading properties
+    .section-heading{
+        color : $colorPurple;
+        font-size : 7vh;
+        text-align : center; 
+        margin-top: 18vh;
+        padding : 3vh 0 6vh;
+    }
+    //END :: Session-Timer-section-heading properties
+    
+    //BEGIN :: Session-Timer-section properties
+    .timer-section{
+        .timer-container, .time-up-message{
+            text-align: center;
+            margin: 0 0 6vh;
+        }
+        .timer-container{
+           
+            div{
+                display: inline-block;
+            }
+            .time{
+                font-size : 20vw;
+            }
+            .suffix{
+                font-size: 5vw;
+                padding-right: 5%;
+            }
+            .hours{
+                color: $colorPurple;
+            }
+            .mins{
+                color: $colorDullPink;
+            }
+            .secs{
+                color: $colorPurple;
+                padding-right: 0;
+            }
+            
+        }
+        .time-up-message{
+            display: none;
+            color: $colorDarkRed;
+            font-size : 20vw;
+            opacity: 0;
+            animation: timeup-show 4s ease-in forwards;
+            @keyframes timeup-show {
+                0%   {opacity: 0;}
+                25%  {opacity: 0.25;}
+                50%  {opacity: .5;}
+                75%  {opacity: 0.75;}
+                100% {opacity: 1;}
+            }
+        }
+    }
+    //END :: Session-Timer-section properties
+
+    //BEGIN :: Footer styling
+    .footer-section{
+        .footer-img-wrapper{
+            width : 98%;
+            img{
+                width : 100%;
+                height : auto; 
+            }
+            svg{
+                display : block;
+                width : 100%;
+                height : auto;
+            }
+        }
+    }
+    //END :: Footer styling
+}

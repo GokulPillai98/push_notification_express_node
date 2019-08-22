@@ -1,0 +1,262 @@
+@import "_variables";
+@import "_commons";
+
+.container{
+    &.main{
+        padding-top: 80px;
+    }
+    .g-signin2{
+        margin: 0 auto;
+        width: 120px;
+    }   
+}
+
+.clues{
+    margin-top: 50px;
+    .clueBox{
+        background: $overlay;
+        padding: 10px;
+        color: $white;
+    }
+    @media screen and (max-width: 992px){
+        margin-top: 15px;
+    }
+    .noClue{
+        padding: 0 10px 10px;
+    }
+}
+
+.game{
+    .profile{
+        display: block;
+        border: 0;
+        padding: 10px;
+        background: $overlay;
+        border-radius: 0;
+        .img{
+            width: 80px;
+            height: 80px;
+            background: #ccc;
+            float: left;
+        }
+        .details{
+            float: right;
+            width: calc(100% - 85px);
+            text-align: center;
+            
+            .cell{
+                width: 48%;
+                height: 80px;
+                display: inline-block;
+                padding: 10px;
+                vertical-align: top;
+                background: $red;
+                color: $white;
+                &:nth-child(2){
+                    background: $orange;
+                }
+                h5{
+                    font-size: 28px;
+                    font-weight: 300;
+                }
+            }
+        }   
+    }
+}
+
+.login-info{
+    color: $white;
+    padding: 20px;
+    background: $overlay;
+    min-height: 500px;
+    .logo svg{
+        display: block;
+        margin: 0 auto;
+    }
+    h3{
+        font-size: 18px;
+        line-height: 26px;
+        font-weight: 300;
+        margin-bottom: 25px;
+        text-align: justify;
+    }
+    button{
+        display: block;
+        margin: 10px auto;
+    }
+}
+
+.question{
+    padding: 0 30px;
+    @media screen and (max-width: 992px){
+        padding: 0;
+        margin-top: 15px;
+    }
+    .game-info{
+        background: $overlay;
+        padding: 20px;
+        min-height: 500px;
+        position: relative;
+        .game-level{
+    
+        }
+        .game-img{
+            width: 400px;
+            height: 400px;
+            margin: 0 auto 20px;
+            border: 1px solid $white;
+            @media screen and (max-width: 992px){
+                width: 250px;
+                height: 250px;
+            }
+        }
+    
+        .game-answer{
+            width: 100%;
+            text-align: center;
+            input{
+                height: 40px;
+                padding: 10px;
+            }
+            button{
+                width: 100px;
+                height: 40px;
+                border:0;
+                background: $blue;
+                color: $white;
+                font-weight: 300;
+            }
+        }
+
+        .maintenanceStatus{
+            width: 300px;
+            height: 250px;
+            background: url(../img/maintenance.png) no-repeat center;
+            background-size: 100% 100%;
+            margin: 0 auto;
+            @media screen and (max-width: 992px){
+                width: 200px;
+                height: 150px;
+            }
+        }
+
+        .gameCompleted{
+            width: 340px;
+            height: 300px;
+            background: url(../img/gameover.png) no-repeat center;
+            background-size: 100% 100%;
+            margin: 50px auto;
+            @media screen and (max-width: 992px){
+                width: 200px;
+                height: 200px;
+            }
+        }
+
+        &.game-not-started{
+            color: $white;
+            text-align: center;
+            font-size: 24px;
+            padding: 30px;
+        }
+
+        &.rules{
+            color: $white;
+            button{
+                width: 150px;
+                display: block;
+                margin: 0 auto;
+            }
+        }
+    }
+}
+
+
+.leaderBoard{
+    padding-left: 0;
+    @media screen and (max-width: 992px){
+        padding-left: 15px;
+        margin-top: 15px;
+    }
+   
+    .board-item{
+        background: $overlay;
+        padding: 10px 20px;
+        max-height: 500px;
+        overflow-y: auto;
+    }
+    ul{
+        padding: 0;
+        list-style: none;
+        li{
+           
+            position: relative;
+            border: 0;
+            margin: 25px 0;
+            padding: 9px  60px;
+            text-align: center;
+            background: $green;
+            color: $white;
+            div{
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                width: 100%;
+                font-size: 14px;
+            }
+            .rank, .badge{
+                position: absolute;
+                width: 45px;
+                height: 48px;
+                top: -5px;
+                font-size: 22px;
+                font-weight: 300;
+                padding: 5px 0;
+                display: block;
+            }
+            .badge{
+                right:10px;
+                background: $red;
+                border-radius: 0;
+                padding: 10px 0;
+                &.true{
+                    font-size: 14px;
+                }
+                span{
+                    font-size: 11px;
+                }
+            }
+            .rank{
+                background: $orange;
+                left: 10px;
+            }
+
+            &:nth-child(2n){
+                background: $blue;
+                .badge{
+                    background: $green;
+                }
+                .rank{
+                    background: $red;
+                }
+            }
+            &:nth-child(3n){
+                background: $orange;
+                .badge{
+                    background: $blue;
+                }
+                .rank{
+                    background: $green;
+                }
+            }
+            &:nth-child(4n){
+                background: $red;
+                .badge{
+                    background: $orange;
+                }
+                .rank{
+                    background: $blue;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,51 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box; }
+
+.float-left {
+  float: left; }
+
+.float-right {
+  float: right; }
+
+.clear-fix {
+  clear: both; }
+
+.timer-section {
+  font-family: "Roboto Condensed", sans-serif; }
+  .timer-section .timer-container {
+    text-align: center;
+    margin-bottom: 50px; }
+    .timer-section .timer-container div {
+      display: inline-block; }
+    .timer-section .timer-container .time {
+      font-size: 15vw; }
+    .timer-section .timer-container .suffix {
+      font-size: 3vw;
+      padding-right: 5%; }
+      @media screen and (max-width: 767px) {
+        .timer-section .timer-container .suffix {
+          padding-right: 4%; } }
+    .timer-section .timer-container .days {
+      color: #6A3F85; }
+    .timer-section .timer-container .hours {
+      color: #F5A623; }
+    .timer-section .timer-container .mins {
+      color: #D15970; }
+    .timer-section .timer-container .secs {
+      color: #FFE06E;
+      padding-right: 0; }
+    .timer-section .timer-container .hash-tag-symb, .timer-section .timer-container .hash-tag-allspark, .timer-section .timer-container .hash-tag-tx {
+      font-size: 15vw; }
+    .timer-section .timer-container .hash-tag-symb {
+      color: #ECAF60; }
+    .timer-section .timer-container .hash-tag-allspark {
+      color: #56245F; }
+    .timer-section .timer-container .hash-tag-tx {
+      color: #D15970; }
+    @media screen and (max-width: 767px) {
+      .timer-section .timer-container {
+        margin-bottom: 30px; } }
+
+/*# sourceMappingURL=timer.css.map */

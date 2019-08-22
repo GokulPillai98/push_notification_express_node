@@ -1,0 +1,154 @@
+#timeline {
+    width: 66%;
+    margin: 80px auto 0;
+    position: relative;
+    &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 50%;
+        top: 0;
+        margin: 50px 0 0 -3px;
+        width: 3px;
+        height: 75%;
+        background: #aaa;
+        
+         @media screen and (max-width: $tablet){
+             height: 85%;
+             margin-top:0;
+         }
+         @media screen and (max-width: $mobile){
+             display: none;
+         }
+    }
+    article {
+        width: 100%;
+        margin: -80px 0 25px 0;
+        position: relative;
+        border-radius: 10px;
+        &:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+        @media screen and (max-width: $mobile){
+            margin:0 0 10px 0;
+        }
+    }
+    
+  
+    @media screen and (max-width: $tablet){
+         @include clearFloat;
+    }
+    @media screen and (max-width: $mobile){
+        @include clearFloat;
+        margin: 100px 0 20px;
+    }
+}
+#timeline article div.inner {
+    width: 40%;
+    float: left;
+    margin: 5px 0 0 0;
+    min-height: 130px;
+    border-radius: 10px;
+    padding:20px;
+    color: #fff;
+    font-size: 11px;
+    @media screen and (max-width: $mobile){
+        width: calc(100% - 75px);
+    }
+}
+#timeline article div.inner span.date {
+    display: block;
+    width: 60px;
+    height: 60px;
+    padding: 10px 0;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin: 25px 0 0 -32px;
+    text-transform: uppercase;
+    background: $theme-black;
+    color: rgb(255,255,255);
+    border-radius: 10px;
+    @media screen and (max-width: $mobile){
+        right: 0;
+        left: auto;   
+    }
+}
+#timeline article div.inner span.date span {
+    display: block;
+    text-align: center;
+    font-size: 12px;
+    &.month{
+        font-size: 18px;
+    }
+}
+#timeline article div.inner h2 {
+    margin: 0;
+    color: #fff;
+    font-size: 20px;
+    position: relative;
+    line-height: 22px;
+    font-size: 18px;
+    &:after {
+        content: '';
+        position: absolute;
+        top: 25px;
+        right: -25px;
+        width: 20px; 
+        height: 20px;
+        -webkit-transform: rotate(-45deg);
+    }
+}
+#timeline article div.inner{
+    h3{
+       margin:5px 0 15px;
+       font-weight: 400; 
+    }
+    ul{
+        li{
+            padding-left: 20px;
+            position: relative;
+            &:before{
+                position: absolute;
+                top: 4px;
+                left: 0px;
+                content: '\f0a4';
+                font: normal normal normal 14px/1 FontAwesome;
+                font-size: inherit;
+            }
+        }
+    }
+}
+#timeline article:nth-child(2n+2) div.inner {
+    float: right;
+    @media screen and (max-width: $mobile){
+        float: left;
+    }
+}
+#timeline article:nth-child(2n+2) div.inner h2:after {
+  left: -25px;
+  @media screen and (max-width: $mobile){
+        left: auto;
+  }
+}
+
+#timeline article{
+    &:nth-child(1) div.inner,&:nth-child(6) div.inner{
+        background: $theme-red;
+        h2:after, span.date{background: $theme-red;}
+    }
+    &:nth-child(3) div.inner,&:nth-child(8) div.inner{
+        background: $theme-green;
+        h2:after, span.date{background: $theme-green;}
+    }
+    &:nth-child(2) div.inner,&:nth-child(5) div.inner{
+        background: $theme-blue;
+        h2:after, span.date{background: $theme-blue;}
+    }
+    &:nth-child(4) div.inner,&:nth-child(7) div.inner{
+        background: $theme-orange;
+        h2:after, span.date{background: $theme-orange;}
+    }
+}

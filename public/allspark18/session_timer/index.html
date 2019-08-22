@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>AllSpark 2018</title>
+        <!-- BEGIN :: Include Stylesheet and Fonts -->
+        <link rel = "shortcut icon" href = "images/favicon.ico" type = "image/x-icon">
+        <link rel = "icon" href = "images/favicon.ico" type = "image/x-icon"> 
+        <link href = "https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700" rel="stylesheet">
+        <link rel = "stylesheet" href = "styles/css/index.css">
+        <!-- END :: Include Stylesheet and Fonts-->
+    </head>
+    <body>
+        <!-- BEGIN :: Session Timeline Main Wrapper -->
+        <div class="session-timeline-main-wrapper">
+            
+            <!-- BEGIN :: Session Selector Container -->
+            <div class="selector-container">
+                <div class="event-selection">
+                    <div class="label-left-container"><label>Event</label></div>
+                    <div class="select-right-container">
+                        <select id="event-selector" onChange="SESSION_SELECTOR(this.value)">
+                            <option disabled="disabled" selected="selected">Select event</option>
+                        </select>
+                    </div>
+                    <div class="clear-div"></div>
+                </div>
+                <div class="session-selection">
+                    <div class="label-left-container"><label>Session</label></div>
+                    <div class="select-right-container">
+                        <select id="session-selector" onChange="SETTIMER(this.value)">
+                            <option disabled="disabled" selected="selected">Select session</option>
+                        </select>
+                    </div>
+                    <div class="clear-div"></div>
+                </div>
+                <div class="session-duration-container">
+                    <div class="label-left-container"><label>Duration</label></div>
+                    <div class="duration-container">
+                        <span class="duration-value">0</span>
+                        <span> minutes</span>
+                    </div>
+                    <div class="clear-div"></div>
+                </div>
+                <button onclick="TIMER()">START</button> 
+                
+            </div>
+            <!-- END :: Session Selector Container -->
+
+            <!-- BEGIN :: Session Timeline Section -->
+            <div class = "section-heading">
+                Session
+            </div>
+            
+            <section class = "timer-section align-center">
+                <div class = "timer-container">
+                    <div class = "time hours"></div>
+                    <div class = "suffix hours"></div>
+                    <div class = "time mins">00</div>
+                    <div class = "suffix mins">M</div>
+                    <div class = "time secs">00</div>
+                    <div class = "suffix secs">S</div>
+                </div>
+                <div class='time-up-message'>TIME UP!</div>
+            </section>
+            <!-- END :: Session Timeline Section -->
+
+            <!-- BEGIN :: Footer Section -->
+            <footer class = "footer-section">
+                <div class = "footer-img-wrapper">
+                    <img src = "images/FooterRocket.png">
+                </div>
+            </footer>
+            <!-- END :: Footer Section -->
+        </div>
+        <!-- END :: Session Timeline Main Wrapper -->
+
+        <!-- BEGIN :: Including the necessary scripts -->
+        <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src = "data/events-data.js"></script>
+        <script src = "js/session_timer.js"></script>
+        <!-- END :: Including the necessary scripts -->
+    </body>
+</html>

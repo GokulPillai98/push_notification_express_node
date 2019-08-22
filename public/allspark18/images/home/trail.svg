@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="way" width="103px" height="116px" viewBox="0 0 103 116" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.1 (57501) - http://www.bohemiancoding.com/sketch -->
+    <title>way</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <radialGradient cx="84.6188215%" cy="10.9170981%" fx="84.6188215%" fy="10.9170981%" r="100.86281%" gradientTransform="translate(0.846188,0.109171),scale(1.000000,0.893661),rotate(81.228397),translate(-0.846188,-0.109171)" id="radialGradient-1">
+            <stop stop-color="#FFDE64" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <path d="M120.083478,38.2780749 C101.657971,59.2192513 88.6330435,80.1604278 81.0086957,101.101604 C73.3843478,122.042781 72.7489855,139.493761 79.1026087,153.454545 L17.1547826,153.454545 C27.9907564,130.609626 42.2864086,109.351159 60.0417391,89.6791444 C77.7970697,70.0071301 97.8109827,52.8734403 120.083478,38.2780749 Z" id="path-2"></path>
+    </defs>
+    <g id="Website" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="design_1" transform="translate(-114.000000, -558.000000)">
+            <g id="design" transform="translate(97.000000, 519.000000)">
+                <g id="vector">
+                    <g id="all" transform="translate(0.000000, 0.748663)">
+                        <g id="letter_a">
+                            <g id="logo">
+                                <g id="logo-copy">
+                                    <g id="way">
+                                        <use fill="#FFFFFF" xlink:href="#path-2"></use>
+                                        <use fill="url(#radialGradient-1)" xlink:href="#path-2"></use>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,106 @@
+#carousel-wrapper {
+    .title-section {
+        font-family: $fontCenturyGothic;
+        font-size: 6vw;
+        text-transform: uppercase;
+        text-align: right;
+        padding: 20px 10%;
+    }
+    
+    #slider-container {
+        overflow: hidden;
+        position: relative;  
+        margin-bottom: 10px; 
+        .btn {
+            position: absolute;
+            top: calc(50% - 30px);
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            background: $primary-blue url('../../assets/right-arrow.svg') no-repeat center;
+            background-size: 30%;
+            border: 2px solid $theme-white;
+            text-align: center;
+            padding: 10px;
+        }
+        // @media only screen and (max-width: 550px) {           
+        //     .btn{
+        //         height: 30px;
+        //         width: 30px;
+        //     }           
+        // }
+        #next:hover {
+            transform: scale(1.2);
+        }
+        
+        .btn.inactive {
+            border-color: rgb(153, 121, 126);
+        }
+        
+        .btn:first-of-type {
+            transform: rotate(-180deg);
+            left: 50px;
+            display: none;
+        }
+
+        #prev:hover{
+            transform: rotate(-180deg) scale(1.2);
+        }
+        
+        .btn:last-of-type {
+            right: 50px;
+        }
+        @media only screen and (max-width: 550px) {           
+            .btn:first-of-type {
+                left: 10px;
+            }           
+        }
+        @media only screen and (max-width: 550px) {           
+            .btn:last-of-type {
+                right: 10px;
+            }           
+        }
+
+        #slider {
+            display: flex;
+            width: 1000%;
+            height: 100%; 
+            transition: all .5s;         
+        }
+        
+        #slider {
+            .slide {
+                height: 30rem;
+                width: 30rem;
+                margin-right: 10px;
+                background-color: #F3EFEE;
+                display: grid;
+                place-items: center;
+                .carousel-img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+            @media only screen and (max-width: 1100px) {
+                .slide {
+                    height: 20rem;
+                    width: calc(3.3333333% - 20px);
+                    margin: 0 10px;
+                }
+            }
+            @media only screen and (max-width: 900px) {
+                .slide {
+                    height: 20rem;
+                    width: calc(5% - 20px);
+                }
+            }
+            @media only screen and (max-width: 550px) {           
+                .slide {
+                    height: 20rem;
+                    width: calc(10% - 20px);
+                }           
+            }
+         } 
+    }
+}

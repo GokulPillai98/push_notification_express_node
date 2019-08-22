@@ -1,0 +1,157 @@
+$theme-white: #fff;
+$theme-red           : #E20250;
+$theme-blue          : #039EDF;
+$theme-green         : #0BA35A;
+$theme-orange        : #F19401;
+
+.stage {
+  position: relative;
+  width: 400px;
+  height: 240px;
+  margin:0 auto;
+  perspective: 1000px;
+  @media screen and (max-width: $mobile){
+      display: none;
+  }
+
+  .cube {
+      position: absolute;
+      width: inherit;
+      height: inherit;
+      top: 20px;
+      transform-style: preserve-3d;
+      transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+      animation: rotation3D linear infinite 17s;
+      backface-visibility: hidden;
+      span {
+          position: absolute;
+          width: 200px;
+          height: 200px;
+          color: $theme-white;
+          left: 165px;
+          top: 15px;
+          display: block;
+          
+          @media screen and (max-width: $mobile){
+              width: 100px;
+              height: 100px;
+          }
+      }
+  }
+}
+
+
+@mixin addTransformations($prop){
+    -ms-transform: $prop;
+    -moz-transform: $prop;
+    -webkit-transform: $prop;
+    transform: $prop;
+}
+#face1 {
+  background-color: #023d52;
+  top: 30px;
+    background-image: url("../img/logo.png");
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: 50%;
+  transform: translateZ(100px);
+  @media screen and (max-width: $mobile){
+      @include addTransformations(translateZ(50px));
+  }
+}
+#face2 {
+  background-color:  #3d686c;
+  top: 30px;
+  background-image: url("../img/logo.png");
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: 50%;
+  transform: translateZ(-100px) rotateY(180deg);
+  @media screen and (max-width: $mobile){
+      @include addTransformations(translateZ(-50px) rotateY(180deg));
+  }
+}
+#face3 {
+  background-color: $theme-green;
+  top: 30px;
+  background-image: url("../img/sirius.png");
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: 80%;
+  transform: translateX(100px) rotateY(90deg);
+  @media screen and (max-width: $mobile){
+      @include addTransformations(translateX(50px) rotateY(90deg));
+  }
+}
+#face4 {
+  background-color: $theme-blue;
+  top: 30px;
+  background-image: url("../img/sirius.png");
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: 80%;
+  transform: translateX(-100px) rotateY(-90deg);
+  @media screen and (max-width: $mobile){
+      @include addTransformations(translateX(-50px) rotateY(-90deg));
+  }
+}
+#face5 {
+  background-color: $theme-orange;
+  top: 30px;
+  background-image: url("../img/nameLogo.png");
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: 80%;
+  transform: translateY(100px) rotateX(-90deg);
+}
+#face6 {
+  background-color : $theme-red;
+  top: 30px;
+  padding: 15px;
+  background-image: url("../img/nameLogo.png");
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: 80%;
+  line-height: 60px;
+  font-size: 70px;
+  transform: translateY(-100px) rotateX(90deg);
+}
+@-moz-keyframes rotation3D {
+  from {
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(20deg);
+  }
+  to {
+    transform: rotateX(0deg) rotateY(-360deg) rotateZ(20deg);
+  }
+}
+@-webkit-keyframes rotation3D {
+  from {
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(20deg);
+    -webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(20deg);
+  }
+  to {
+      -webkit-transform: rotateX(0deg) rotateY(-360deg) rotateZ(20deg);
+    transform: rotateX(0deg) rotateY(-360deg) rotateZ(20deg);
+  }
+}
+@-o-keyframes rotation3D {
+  from {
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(20deg);
+  }
+  to {
+    transform: rotateX(0deg) rotateY(-360deg) rotateZ(20deg);
+  }
+}
+@keyframes rotation3D {
+  from {
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(20deg);
+  }
+  to {
+    transform: rotateX(0deg) rotateY(-360deg) rotateZ(20deg);
+  }
+}
+
+@-webkit-keyframes spin {
+	from { -webkit-transform: rotateY(0) rotateX(0) rotateZ(0); }
+	to   { -webkit-transform: rotateY(-360deg) rotateX(360deg) rotateZ(0); }
+}

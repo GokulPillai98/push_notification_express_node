@@ -1,0 +1,28 @@
+//BEGIN :: Font stack
+$fontCenturyGothic                      : 'Century Gothic';
+$fontRobotoCondensed                    : 'Roboto Condensed', sans-serif;
+//END :: Font stack
+
+//BEGIN :: Color Coding
+$colorBlack                             : #000000;
+$colorDullPink                          : #D15970;
+$colorBrightPink                        : #FF6666;
+$colorPurple                            : #6A3F85;
+$colorLightPurple                       : #794383;
+$colorDarkPurple                        : #56245F;
+$colorDullYellow                        : #ECAF60;
+$colorDarkYellow                        : #F5A623;
+$colorBrightYellow                      : #FFE06E;
+$colorWhite                             : #ffffff;
+//END :: Color Coding
+
+
+//BEGIN :: Responsive breakpoints
+$mobileBreakPoint                       : 767px;
+$mobileLandscapeBreakpoint              : 850px;
+
+$mobileWidth                            : 420px;
+$iphoneSELandscapeWidth                 : 568px;
+$ipadWidth                              : 768px;
+$tabWidth                               : 1024px;
+$desktopSmallWidth                      : 1290px;

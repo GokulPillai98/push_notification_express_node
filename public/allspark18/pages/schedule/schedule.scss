@@ -1,0 +1,240 @@
+//BEGIN :: Import of partials and commons
+@import '../../styles/scss/reset';
+@import '../../styles/scss/variables';
+@import '../../styles/scss/mixins';
+@import '../../styles/scss/commons';
+//END :: Import of partials and commons'
+
+//schedule-section properties
+.schedule-section{
+    width: 100%;
+    font-family: $fontCenturyGothic;
+    .schedule-img-wrapper{
+        width: 60%;
+        margin : 0 auto;
+        img{
+            width: 100%;
+            height: auto;
+        }
+        @media screen and (max-width:$mobileBreakPoint){
+            width : 80%;
+        }
+    }
+}
+
+//schedule-header properties
+.schedule-header{
+    height: 100px;
+    text-align: center;
+    padding:25px 0px;
+    font-size: 18px;
+    color : $colorLightPurple;
+}
+
+//schedule-details properties
+.schedule-details{
+    @media screen and (max-width:$mobileBreakPoint){
+        margin-top : 30px;
+    }
+    width: 100%;
+    //margin-top: 60px;
+    margin-top:-8px;
+    background: $colorLightPurple ;
+    position: relative;
+    font-family: $fontRobotoCondensed;
+    color: $colorWhite;
+    
+    //schedule-tile properties
+    .schedule-tile-wrapper{
+        position: absolute;
+        right: 0px;
+        top: -55px;
+        @media screen and (max-width:$mobileBreakPoint){
+            top: -45px;
+        }
+        //button properties
+        button{
+            @media screen and (max-width:$mobileBreakPoint){
+                width: 75px;
+                height: 45px;
+            }
+            width: 100px;
+            height: 55px;
+            border: 0px;
+            color: $colorWhite;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            &:focus{
+                outline: none;
+            }
+            &:hover {
+                //hover animation  to be added
+            }   
+        }
+        
+    }
+
+    //schedule properties
+    .schedule-wrapper{
+        list-style-type: none;
+        //list properties
+       .schedule-list-item-wrapper{
+            border-bottom: 1px solid $colorWhite;
+           // width: 100%;
+            &:first-child{
+                padding: 25px 0px 25px 35px; 
+                @media screen and (max-width:$mobileBreakPoint){
+                    padding: 10px 0px 10px 15px;
+                }
+                h1{
+                    font-size: 18px;
+                    @media screen and (max-width:$mobileBreakPoint){
+                        font-size: 16px;
+                    }
+                }
+                h2{
+                    margin-top: 5px;
+                    font-size: 16px;
+                    @media screen and (max-width:$mobileBreakPoint){
+                        font-size: 14px;
+                    }
+                    font-weight: 400;
+                }
+    
+            }
+            .schedule-table{
+                display: table;
+              //  width: 100%;
+                font-size: 14px;
+                @media screen and (max-width:$mobileBreakPoint){
+                    font-size: 12px;
+                }
+                padding: 10px 0px; 
+
+                .schedule-row{
+                  //  width: 100%;
+                    display : table-row;
+                    .topic{
+                       // width: 95%;
+                        padding: 10px 35px 10px 35px !important;
+                        @media screen and (max-width:$mobileBreakPoint){
+                               //width: 90%;
+                                padding: 10px 15px 10px 15px !important;
+                        }
+                    }
+                    .time{
+                        width: 100px;
+                        @media screen and (max-width:$mobileBreakPoint){
+                            min-width: 75px;
+                        }
+                      }
+                   
+                    .schedule-cell{
+                        display: table-cell;
+                        font-weight: 400;
+                        padding: 10px 0px 10px 35px;
+                        line-height: 1.5;
+                        word-spacing: 3px;
+                        text-transform: uppercase;
+                        @media screen and (max-width:$mobileBreakPoint){
+                            padding: 10px 0px 10px 15px;
+                        }
+                       
+                        
+                        .presenter-wrapper{
+                            margin-top: 2.5px;
+                            margin-right: -1px;
+                            //font-family: $fontCenturyGothic;
+                            div{
+                                margin-right: 5px;
+                                display: inline-block;
+                              //  vertical-align: bottom;
+                            }
+                            .presenter-icon{
+                                font-size: 12px;
+                                font-weight: bold;
+                            }
+                            .presenter-name{
+                                font-size: 13px;
+                                font-weight: 100;
+                               // font-family: $fontCenturyGothic;
+                               
+                                text-transform: capitalize;
+                                &::after{
+                                    content: ","
+                                }
+                                &:last-child{
+                                    &::after{
+                                        content: " "
+                                    }
+                                }
+                            }
+
+                        }
+
+                       
+                        .hall{
+                            @media screen and (max-width:$mobileBreakPoint){
+                                display: none;
+                            }
+                        }
+                        &:first-child{
+                            @media screen and (max-width:$mobileBreakPoint){
+                                min-width: 75px;
+
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+        //schedule-footer properties
+        .schedule-footer{
+            text-align: center;
+            padding: 20px 0px;
+            font-size: 18px;
+            @media screen and (max-width:$mobileBreakPoint){
+                font-size: 16px;
+            }
+            text-transform: uppercase;
+            color: $colorBrightYellow;
+            font-weight: 300;
+        }
+           
+    }
+}
+
+//yellow - background properties
+.yellow{
+    background: $colorDullYellow ;
+}
+
+//violet - background properties
+.violet{
+    background: $colorLightPurple;
+}
+
+//footer property
+.footer-property{
+    color : $colorBrightYellow;
+    font-weight: 600 !important;
+}
+//allspark location properties
+.allspark-location{
+    margin-left: 10px;
+}
+
+.dummy{
+    text-align: center;
+    padding: 10px 0px;
+    font-size: 16px;
+    @media screen and (max-width:$mobileBreakPoint){
+        font-size: 14px;
+    }
+}
+
+.allspark-yellow{
+    color: $colorBrightYellow;
+}

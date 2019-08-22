@@ -1,0 +1,45 @@
+//BEGIN :: float styling
+.float-left {
+  float: left;
+}
+.float-right {
+  float: right;
+}
+.clear-fix {
+  clear: both;
+}
+//END :: float styling
+
+.half-width {
+  width: 50%;
+}
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+
+.title{
+    font-family: "Poiret One", cursive;
+    font-size: 5vw;
+    line-height: 1.1;
+    font-weight: 100;
+    @media only screen and (max-width: $mobileBreakPoint) {
+      text-align: center;
+      font-size: 8vw;
+    }
+}
+
+section{
+  margin: 100px 0 0;
+  @media only screen and (max-width: $mobileBreakPoint) {
+    margin-top: 50px
+  }
+}
+
+a:focus{
+  outline: none;
+}
+
+

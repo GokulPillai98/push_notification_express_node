@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="56px" height="41px" viewBox="0 0 56 41" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.1 (57501) - http://www.bohemiancoding.com/sketch -->
+    <title>rocket</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#593B89" offset="0%"></stop>
+            <stop stop-color="#DA5C6F" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Website" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="design_1" transform="translate(-207.000000, -532.000000)" fill="url(#linearGradient-1)">
+            <g id="design" transform="translate(97.000000, 519.000000)">
+                <g id="vector">
+                    <g id="all" transform="translate(0.000000, 0.748663)">
+                        <g id="letter_a">
+                            <g id="logo">
+                                <g transform="translate(3.000000, 0.000000)" id="rocket">
+                                    <path d="M148.122784,16.8049701 C149.889829,20.1015482 150.085214,25.7330119 148.70894,33.6993611 L153.29913,38.3480654 L153.29913,53.5080214 L144.404727,44.7312048 L132.649186,44.7312048 L123.754783,53.5080214 L123.754783,38.3480654 L128.814707,33.2236396 C127.624715,25.5084308 127.895551,20.0355409 129.627215,16.8049701 L138.723919,-0.748663102 L148.122784,16.8049701 Z" transform="translate(138.526957, 26.379679) rotate(60.000000) translate(-138.526957, -26.379679) "></path>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

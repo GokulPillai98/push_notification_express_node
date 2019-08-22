@@ -1,0 +1,94 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto Condensed", sans-serif; }
+
+.session-timeline-main-wrapper .five-minute-intimation {
+  background: #ffe0aa; }
+.session-timeline-main-wrapper .two-minute-intimation {
+  animation: blink 1s ease-in-out infinite; }
+@keyframes blink {
+  50% {
+    background: #ffe3e3; }
+  100% {
+    background: #ffffff; } }
+.session-timeline-main-wrapper .selector-container {
+  width: 20%;
+  margin: 70px auto 0;
+  color: #6A3F85;
+  font-size: 20px; }
+  .session-timeline-main-wrapper .selector-container div {
+    margin-bottom: 10px; }
+  .session-timeline-main-wrapper .selector-container .label-left-container {
+    float: left;
+    width: 40%; }
+  .session-timeline-main-wrapper .selector-container .select-right-container {
+    float: left;
+    width: 60%; }
+    .session-timeline-main-wrapper .selector-container .select-right-container select {
+      width: 100%;
+      font-size: 14px; }
+  .session-timeline-main-wrapper .selector-container .duration-container {
+    float: left;
+    text-align: left; }
+  .session-timeline-main-wrapper .selector-container button {
+    width: 100%;
+    margin: 20px auto 0;
+    padding: 10px 20px;
+    background-color: #D15970;
+    color: #ffe0aa;
+    font-size: 20px;
+    border: 0;
+    cursor: pointer; }
+.session-timeline-main-wrapper .section-heading {
+  color: #6A3F85;
+  font-size: 7vh;
+  text-align: center;
+  margin-top: 18vh;
+  padding: 3vh 0 6vh; }
+.session-timeline-main-wrapper .timer-section .timer-container, .session-timeline-main-wrapper .timer-section .time-up-message {
+  text-align: center;
+  margin: 0 0 6vh; }
+.session-timeline-main-wrapper .timer-section .timer-container div {
+  display: inline-block; }
+.session-timeline-main-wrapper .timer-section .timer-container .time {
+  font-size: 20vw; }
+.session-timeline-main-wrapper .timer-section .timer-container .suffix {
+  font-size: 5vw;
+  padding-right: 5%; }
+.session-timeline-main-wrapper .timer-section .timer-container .hours {
+  color: #6A3F85; }
+.session-timeline-main-wrapper .timer-section .timer-container .mins {
+  color: #D15970; }
+.session-timeline-main-wrapper .timer-section .timer-container .secs {
+  color: #6A3F85;
+  padding-right: 0; }
+.session-timeline-main-wrapper .timer-section .time-up-message {
+  display: none;
+  color: #c53a3a;
+  font-size: 20vw;
+  opacity: 0;
+  animation: timeup-show 4s ease-in forwards; }
+@keyframes timeup-show {
+  0% {
+    opacity: 0; }
+  25% {
+    opacity: 0.25; }
+  50% {
+    opacity: .5; }
+  75% {
+    opacity: 0.75; }
+  100% {
+    opacity: 1; } }
+.session-timeline-main-wrapper .footer-section .footer-img-wrapper {
+  width: 98%; }
+  .session-timeline-main-wrapper .footer-section .footer-img-wrapper img {
+    width: 100%;
+    height: auto; }
+  .session-timeline-main-wrapper .footer-section .footer-img-wrapper svg {
+    display: block;
+    width: 100%;
+    height: auto; }
+
+/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,83 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box; }
+
+.float-left {
+  float: left; }
+
+.float-right {
+  float: right; }
+
+.clear-fix {
+  clear: both; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+.guests-section .guests-container {
+  font-family: "Roboto Condensed", sans-serif;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto; }
+  .guests-section .guests-container .card {
+    height: auto;
+    width: 18%;
+    margin-right: 0; }
+    .guests-section .guests-container .card img {
+      width: 100%;
+      height: auto;
+      text-align: center; }
+    .guests-section .guests-container .card .color-line {
+      width: 100%;
+      height: 10px;
+      margin-top: -4px;
+      padding-left: 20px; }
+    .guests-section .guests-container .card .first-name, .guests-section .guests-container .card .last-name {
+      font-size: 20px;
+      font-weight: 900;
+      color: #794383; }
+    .guests-section .guests-container .card .first-name {
+      margin-top: 10px; }
+    .guests-section .guests-container .card .last-name {
+      margin-top: 0px;
+      line-height: 20px; }
+    .guests-section .guests-container .card .designation, .guests-section .guests-container .card .description {
+      font-size: 14px;
+      color: #D15970;
+      width: 100%;
+      margin-top: 5px; }
+    .guests-section .guests-container .card .description {
+      color: black;
+      display: none; }
+    .guests-section .guests-container .card .purple {
+      background-color: #794383; }
+    .guests-section .guests-container .card .dull-pink {
+      background-color: #D15970; }
+    .guests-section .guests-container .card .bright-yellow {
+      background-color: #FFE06E; }
+    .guests-section .guests-container .card .dark-yellow {
+      background-color: #F5A623; }
+  .guests-section .guests-container .card:nth-child(5) {
+    margin-right: -3%; }
+  .guests-section .guests-container .mobile-clear-fix {
+    display: none;
+    clear: both; }
+
+@media screen and (max-width: 767px) {
+  .guests-section .guests-container {
+    display: block;
+    justify-content: unset; }
+    .guests-section .guests-container .card {
+      margin-bottom: 10px; }
+    .guests-section .guests-container .card:nth-child(odd) {
+      width: 45%;
+      float: left;
+      clear: both; }
+    .guests-section .guests-container .card:nth-child(even) {
+      width: 45%;
+      float: right; } }
+
+/*# sourceMappingURL=guests.css.map */

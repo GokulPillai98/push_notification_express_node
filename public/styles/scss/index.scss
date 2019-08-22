@@ -1,0 +1,17 @@
+//BEGIN :: Import of partials and commons
+@import '_reset';
+@import '_variables';
+@import '_commons';
+@import '_home';
+@import '_guest';
+@import '_sessions';
+@import '_timelineSection';
+@import '_schedule';
+@import '_carousel';
+@import '_footer';
+//END :: Import of Partials and commons
+
+body{
+    width: 100%;
+}
+

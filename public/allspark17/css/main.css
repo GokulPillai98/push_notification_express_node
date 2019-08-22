@@ -1,0 +1,184 @@
+*,
+*::after,
+*::before {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+	background: #01102d;
+}
+
+a {
+	text-decoration: none;
+	color: #000;
+	outline: none;
+}
+
+.hidden {
+	position: absolute;
+	overflow: hidden;
+	width: 0;
+	height: 0;
+	pointer-events: none;
+}
+
+/* Icons */
+.icon {
+	display: block;
+	width: 1.5em;
+	height: 1.5em;
+	margin: 0 auto;
+	fill: currentColor;
+}
+
+.view {
+	position: relative;
+	display: flex;
+	justify-content: flex-end;
+	overflow: hidden;
+	height: 100vh;
+	padding: 0 215px 0 150px;
+	background: rgba(1,16,45,0.75);
+	
+}
+
+.content {
+	z-index: 1;
+	width: 100%;
+}
+
+.deco__text {
+	font-size: 0.8em;
+	line-height: 1;
+	margin: 0;
+	color: #bcb8e8;
+}
+
+
+.btn {
+	border: none;
+	background: none;
+}
+
+.btn:focus {
+	outline: none;
+}
+
+.btn--back {
+	font-size: 1.5em;
+	position: absolute;
+	z-index: 1002;
+	top: 1em;
+	left: 0;
+	opacity: 0;
+	color: #fff;
+	cursor: pointer;
+}
+
+.btn--menu {
+	font-size: 0.85em;
+	position: absolute;
+	z-index: 1000;
+	top: 0;
+	left: 0;
+	display: none;
+	margin: 10px 0 0 6px;
+}
+
+.btn--menu-active .icon--menu,
+.icon--cross {
+	display: none;
+}
+
+.btn--menu-active .icon--cross {
+	display: block;
+}
+
+/* Content */
+.tabscontent {
+	pointer-events: none;
+}
+
+.tabscontent__item {
+	position: fixed;
+	overflow-x: hidden;
+	z-index: 1001;
+	top: 0;
+	left: 0;
+	overflow-y: auto;
+	width: 100%;
+	height: 100vh;
+	opacity: 0;
+}
+
+.tabscontent__item--current,
+.tabscontent__item--current ~ .btn--back {
+	pointer-events: auto;
+}
+
+
+.box {
+	position: relative;
+	width: 40vw;
+	min-width: 300px;
+	height: calc(90vh - 120px);
+	margin-top: 40px;
+	background-size: cover;
+	background-position: 50% 0;
+}
+
+.box__title {
+	font-size: 6em;
+	position: absolute;
+	bottom: 0;
+	left: -1em;
+	margin: 0;
+	color: #fff;
+}
+
+.tabscontent__item:first-child .box {
+	background-image: url(../img/portrait1.jpg);
+}
+
+.tabscontent__item:nth-child(2) .box {
+	background-image: url(../img/portrait2.jpg);
+}
+
+.tabscontent__item:nth-child(3) .box {
+	background-image: url(../img/portrait3.jpg);
+}
+
+@media screen and (max-width: 40em) {
+	.view {
+		overflow: auto;
+		height: auto;
+		min-height: calc(100vh - 69px);
+		margin: 0;
+	}
+	
+	.content {
+		flex-direction: column;
+		padding: 10px;
+	}
+	
+	.demos {
+		align-items: flex-start;
+		margin-top: 1em;
+	}
+	.btn--back{
+		top: 0;
+		left: 0;
+	}
+	.btn--menu {
+		display: block;
+	}
+	.demo-2 .btn--menu {
+		position: relative;
+		margin: 0 2em 0 0;
+	}
+	.demo-2 .tabscontent__item {
+		font-size: 0.575em;
+		flex-direction: column;
+	}
+}

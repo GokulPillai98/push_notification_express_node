@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="108px" height="110px" viewBox="0 0 108 110" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.1 (57501) - http://www.bohemiancoding.com/sketch -->
+    <title>letter_a</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#593B89" offset="0%"></stop>
+            <stop stop-color="#DA5C6F" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Website" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="design_1" transform="translate(-100.000000, -562.000000)" fill="url(#linearGradient-1)">
+            <g id="design" transform="translate(97.000000, 519.000000)">
+                <g id="vector">
+                    <g id="all" transform="translate(0.000000, 0.748663)">
+                        <g id="letter_a">
+                            <g id="logo">
+                                <path d="M62.5654172,46.3540464 L110.105615,142.90026 C111.569469,145.873103 110.346192,149.469757 107.373348,150.933611 C106.54877,151.33964 105.641931,151.550802 104.722807,151.550802 L9.64241082,151.550802 C6.32870232,151.550802 3.64241082,148.864511 3.64241082,145.550802 C3.64241082,144.631677 3.85357253,143.724839 4.25960228,142.90026 L51.7998002,46.3540464 C53.263654,43.3812033 56.8603075,42.1579259 59.8331506,43.6217797 C61.0202762,44.2063307 61.9808662,45.1669207 62.5654172,46.3540464 Z" id="letter_a"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

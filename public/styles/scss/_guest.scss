@@ -1,0 +1,264 @@
+.guests-section {
+  font-size: 100px;
+  padding: 0 $sectionPadding;
+  @media screen and (max-width : $mobileBreakPoint) {
+    padding: 0 $sectionPaddingMobile;
+  }
+}
+.guest-header {
+  margin: 20px 0;
+  text-align: right;
+  .guest-title {
+    font-family: $fontCenturyGothic;
+    font-size: 6.5vw;
+  }
+}
+.guest-content {
+  position: relative;
+  font-size: calc(100% - 2 * #{$sectionPadding});
+  height: 9.70em;
+  margin-bottom: 30px;
+  .checks {
+    position: absolute;
+    z-index: -999;
+    opacity: 0.6;
+    .checks-svg {
+      width: 2.95em;
+      height: 3.11em;
+    }
+  }
+  .checks-one {
+    left: 0;
+    top: 20.6%;
+  }
+  .checks-two {
+    left: 27%;
+    top: 49%;
+  }
+  .checks-three {
+    right: 36.5%;
+    top: 13%;
+  }
+  .checks-four {
+    right: 26%;
+    top: 69.5%;
+  }
+  .checks-five {
+    right: 7%;
+    top: 22%;
+  }
+  .guest-wrapper {
+    position: absolute;
+    .guest-info {
+      font-family: $fontRobotoCondensed;
+      margin: 2px 0;
+      .guest-name {
+        font-weight: 900;
+        font-size: 0.26em;
+        line-height: 1.1em;
+      }
+      .guest-designation {
+        white-space: nowrap;
+        font-size: 0.17em;
+      }
+    }
+    .guest-info-transform {
+      position: absolute;
+      float: right;
+      right: 2.40em;
+      bottom: -0.26em;
+      .name-transform {
+        text-align: right;
+      }
+    }
+    #squaretri {
+      display: inline-block;
+      vertical-align: bottom;
+      height: 0;
+      width: 0;
+      border-top: 0.91em solid transparent;
+      border-bottom: 1.62em solid $secondary-grey-brown;
+      position: relative;
+      .stephen-img{
+        position: absolute;
+        left: -2.95em;
+        top: -0.18em;
+        width: 1.8em;
+        height: 1.8em;
+      }
+      .raj-img{
+        position: absolute;
+        right: -3.1em;
+        top: -0.88em;
+        width: 2.5em;
+        height: 2.5em;
+        background-image: url('../../assets/grey-avatar.svg'); 
+        background-size: 80%; 
+        background-position: center bottom; 
+        background-repeat: no-repeat;
+      }
+
+    }
+    .tri-right {
+      border-right: 2.95em solid $secondary-grey-brown;
+    }
+    .tri-left {
+      border-left: 2.95em solid $secondary-grey-brown;
+    }
+    #circle {
+      display: inline-block;
+      vertical-align: bottom;
+      width: 2.94em;
+      height: 2.94em;
+      border-radius: 50%;
+      background: $primary-blue;
+      background-position: center bottom; 
+      background-repeat: no-repeat;
+      &.jon-anhold{
+        background-image: url('../../assets/blue-avatar.svg'); 
+        background-size: 80%; 
+      }
+      &.luis{
+        background-image: url('../../assets/blue-avatar.svg'); 
+        background-size: 80%; 
+      }
+    }
+    #square {
+      display: inline-block;
+      vertical-align: bottom;
+      width: 2.34em;
+      height: 2.34em;
+      background: $secondary-yellow;
+      &.jonathan-img{
+        background-image: url('../../assets/yellow-avatar.svg'); 
+        background-size: 90%; 
+        background-position: center bottom; 
+        background-repeat: no-repeat;
+      }
+    }
+  }
+  .guest-one {
+    top: 11%;
+    left: 9.5%;
+  }
+  .guest-two {
+    top: 46%;
+    left: 10%;
+  }
+  .guest-three {
+    top: 23%;
+    left: 33.5%;
+  }
+  .guest-four {
+    top: 64.5%;
+    left: 40.5%;
+  }
+  .guest-five {
+    top: 1.5%;
+    right: 22.5%;
+  }
+  .guest-six {
+    top: 50%;
+    right: 16%;
+  }
+  .guest-seven {
+    top: 22%;
+    right: -3%;
+  }
+}
+@media only screen and (max-width: 2860px) and (min-width: 2300px) {
+  .guests-section {
+    font-size: 180px;
+  }
+}
+@media only screen and (max-width: 2300px) and (min-width: 2000px) {
+  .guests-section {
+    font-size: 160px;
+  }
+}
+@media only screen and (max-width: 2000px) and (min-width: 1800px) {
+  .guests-section {
+    font-size: 140px;
+  }
+}
+@media only screen and (max-width: 1800px) and (min-width: 1600px) {
+  .guests-section {
+    font-size: 120px;
+  }
+}
+@media only screen and (max-width: 1600px) and (min-width: 1500px) {
+  .guests-section {
+    font-size: 109px;
+  }
+}
+@media only screen and (max-width: 1400px) and (min-width: 1300px) {
+  .guests-section {
+    font-size: 94.9px;
+  }
+}
+@media only screen and (max-width: 1300px) and (min-width: 1200px) {
+  .guests-section {
+    font-size: 87.9px;
+  }
+}
+@media only screen and (max-width: 1200px) and (min-width: 1100px) {
+  .guests-section {
+    font-size: 80.8px;
+  }
+}
+@media only screen and (max-width: 1100px) and (min-width: 1000px) {
+  .guests-section {
+    font-size: 72.8px;
+  }
+}
+@media only screen and (max-width: 1000px) and (min-width: 900px) {
+  .guests-section {
+    font-size: 66.8px;
+  }
+}
+@media only screen and (max-width: 900px) and (min-width: 767px) {
+  .guests-section {
+    font-size: 55px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .guests-section {
+    margin: 0 3.5vw;
+  }
+  .guest-title {
+    text-align: left;
+    font-size: 8vw !important;
+  }
+  .guest-content {
+    font-size: 85px;
+    text-align: center !important;
+    height: unset;
+    .checks {
+      display: none;
+    }
+    .guest-wrapper {
+      position: unset;
+      margin-bottom: 15px;
+      text-align: center;
+      .guest-info {
+        text-align: center !important;
+        .guest-name {
+          width: 100% !important;
+        }
+      }
+      .guest-info-transform {
+        position: unset;
+        float: none;
+        .name-transform {
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+
+.guest-image{
+  height: 100%;
+}
