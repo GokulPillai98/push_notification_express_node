@@ -77,3 +77,17 @@ self.addEventListener("push", function(event) {
     console.log("Push event but no data");
   }
 });
+
+self.addEventListener("notificationclick", function(event) {
+  const clickedNotification = event.notification;
+  clickedNotification.close();
+
+  // Do something as the result of the notification click
+  const promiseChain = doSomething();
+  event.waitUntil(promiseChain);
+});
+
+function doSomething() {
+    window.open('MyPDF.pdf', '_blank', 'fullscreen=yes')
+}
+
