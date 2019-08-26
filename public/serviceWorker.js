@@ -79,7 +79,7 @@ self.addEventListener("push", function(event) {
 });
 
 self.addEventListener("notificationclick", function(event) {
-  let url = "http://localhost:5000";
+  let url = "http://google.co.in";
   const clickedNotification = event.notification;
   clickedNotification.close(); //android needs explicit close
 

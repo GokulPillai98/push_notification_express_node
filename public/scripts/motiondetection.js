@@ -1,5 +1,7 @@
 const registerServiceWorker = async () => {
-  const swRegistration = await navigator.serviceWorker.register("./serviceWorker.js"); //notice the file name
+  const swRegistration = await navigator.serviceWorker.register(
+    "./serviceWorker.js"
+  ); //notice the file name
   return swRegistration;
 };
 
@@ -58,3 +60,13 @@ const main = async () => {
 };
 
 main();
+
+var OneSignal = window.OneSignal || [];
+OneSignal.push(function() {
+  OneSignal.init({
+    appId: "6dae21b7-0408-466a-a60a-d8e7214aad38",
+    notifyButton: {
+      enable: true
+    }
+  });
+});
