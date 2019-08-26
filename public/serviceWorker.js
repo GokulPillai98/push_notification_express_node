@@ -79,15 +79,34 @@ self.addEventListener("push", function(event) {
 });
 
 self.addEventListener("notificationclick", function(event) {
+  let url = "http://localhost:5000";
   const clickedNotification = event.notification;
-  clickedNotification.close();
+  clickedNotification.close(); //android needs explicit close
 
   // Do something as the result of the notification click
-  const promiseChain = doSomething();
+  const promiseChain = doSomething(url);
   event.waitUntil(promiseChain);
 });
 
-function doSomething() {
-    window.open('MyPDF.pdf', '_blank', 'fullscreen=yes')
-}
+function doSomething(url) {
+  console.log("gokul1");
 
+  // window.open('MyPDF.pdf', '_blank', 'fullscreen=yes')
+  clients.matchAll({ type: "window" }).then(windowClients => {
+    // Check if there is already a window/tab open with the target URL
+    for (var i = 0; i < windowClients.length; i++) {
+      var client = windowClients[i];
+      // If so, just focus it.
+      if (client.url === url && "focus" in client) {
+        console.log("gokul2");
+        return client.focus();
+      }
+    }
+    // If not, then open the target URL in a new window/tab.
+    if (clients.openWindow) {
+      console.log(clients);
+      console.log("gokul3");
+      return clients.openWindow(url);
+    }
+  });
+}
