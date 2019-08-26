@@ -1,14 +1,23 @@
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', function() {
-    navigator.serviceWorker.register('/serviceWorker.js').then(function(registration) {
-      // Registration was successful
-      console.log('ServiceWorker registration successful with scope: ', registration.scope);
-    }, function(err) {
-      // registration failed :(
-      console.log('ServiceWorker registration failed: ', err);
-    });
-  });
-}
+const registerServiceWorker = async () => {
+  const swRegistration = await navigator.serviceWorker.register("./serviceWorker.js"); //notice the file name
+  return swRegistration;
+};
+
+const requestNotificationPermission = async () => {
+  const permission = await window.Notification.requestPermission();
+  // value of permission can be 'granted', 'default', 'denied'
+  // granted: user has accepted the request
+  // default: user has dismissed the notification permission popup by clicking on x
+  // denied: user has denied the request.
+  if (permission !== "granted") {
+    throw new Error("Permission not granted for Notification");
+  }
+};
+
+const showLocalNotification = (title, body, swRegistration) => {
+  swRegistration.showNotification(title);
+};
+
 var flag = 1;
 if (window.DeviceOrientationEvent) {
   window.addEventListener("deviceorientation", handleOrientation, false);
@@ -41,3 +50,11 @@ function handleMotion(e) {
     }
   }
 }
+
+const main = async () => {
+  const swRegistration = await registerServiceWorker();
+  const permission = await requestNotificationPermission();
+  showLocalNotification("This is title", "this is the message", swRegistration);
+};
+
+main();
