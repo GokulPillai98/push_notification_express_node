@@ -11,4 +11,8 @@ express()
     res.writeHead(200, {'Content-Type': 'text/html'});
     res.end(index);
 })
+.get('/sendBrochure', (req, res) => {
+  console.log("Send Brochure")
+  res.end(null);
+})
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))

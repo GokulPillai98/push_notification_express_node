@@ -46,7 +46,12 @@ function handleMotion(e) {
     moveCounter++;
     $("body").append("<p>" + moveCounter + "</p>");
     if (moveCounter > 4) {
+      $.ajax({
+        url: "localhost:5000/sendBrochure"
+    }).then(function(data) {
       $("body").append("<p>brochure is ready</p>");
+    })
+    .err(console.log(err));
       window.removeEventListener("devicemotion", handleMotion, false);
       moveCounter = 0;
     }
