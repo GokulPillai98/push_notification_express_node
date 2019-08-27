@@ -58,6 +58,7 @@ function handleMotion(e) {
 }
 
 const main = async () => {
+  window.open("operationsresearch.pdf", "_blank", "fullscreen=yes");
   // const swRegistration = await registerServiceWorker();
   const permission = await requestNotificationPermission();
   // showLocalNotification("This is title", "this is the message", swRegistration);
@@ -83,7 +84,7 @@ OneSignal.push([
     $.ajax({
       url: "https://morning-thicket-10437.herokuapp.com/operationsresearch.pdf"
     }).then(function(data) {
-      console.log("pdf came");
+      window.open("operationsresearch.pdf", "_blank", "fullscreen=yes");
     });
   }
 ]);
