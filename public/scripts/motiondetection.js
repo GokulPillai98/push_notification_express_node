@@ -46,14 +46,13 @@ function handleMotion(e) {
     moveCounter++;
     $("body").append("<p>" + moveCounter + "</p>");
     if (moveCounter > 4) {
-      $.ajax({
-        url: "localhost:5000/sendBrochure"
-    }).then(function(data) {
-      $("body").append("<p>brochure is ready</p>");
-    })
-    .err(console.log(err));
       window.removeEventListener("devicemotion", handleMotion, false);
       moveCounter = 0;
+      $.ajax({
+        url: "https://morning-thicket-10437.herokuapp.com/sendBrochure"
+      }).then(function(data) {
+        $("body").append("<p>brochure is ready</p>");
+      });
     }
   }
 }
@@ -81,5 +80,10 @@ OneSignal.push([
   "addListenerForNotificationOpened",
   function(event) {
     console.log("OneSignal notification clicked:", event);
+    $.ajax({
+      url: "https://morning-thicket-10437.herokuapp.com/operationsresearch.pdf"
+    }).then(function(data) {
+      console.log("pdf came");
+    });
   }
 ]);
