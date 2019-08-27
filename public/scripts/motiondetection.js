@@ -1,9 +1,9 @@
-const registerServiceWorker = async () => {
-  const swRegistration = await navigator.serviceWorker.register(
-    "./serviceWorker.js"
-  ); //notice the file name
-  return swRegistration;
-};
+// const registerServiceWorker = async () => {
+//   const swRegistration = await navigator.serviceWorker.register(
+//     "./serviceWorker.js"
+//   ); //notice the file name
+//   return swRegistration;
+// };
 
 const requestNotificationPermission = async () => {
   const permission = await window.Notification.requestPermission();
@@ -54,15 +54,16 @@ function handleMotion(e) {
 }
 
 const main = async () => {
-  const swRegistration = await registerServiceWorker();
+  // const swRegistration = await registerServiceWorker();
   const permission = await requestNotificationPermission();
-  showLocalNotification("This is title", "this is the message", swRegistration);
+  // showLocalNotification("This is title", "this is the message", swRegistration);
 };
 
 main();
 
 var OneSignal = window.OneSignal || [];
 OneSignal.push(function() {
+  console.log("One signal")
   OneSignal.init({
     appId: "6dae21b7-0408-466a-a60a-d8e7214aad38",
     notifyButton: {
