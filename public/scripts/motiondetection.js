@@ -58,7 +58,6 @@ function handleMotion(e) {
 }
 
 const main = async () => {
-  window.open("operationsresearch.pdf", "_blank", "fullscreen=yes");
   // const swRegistration = await registerServiceWorker();
   const permission = await requestNotificationPermission();
   // showLocalNotification("This is title", "this is the message", swRegistration);
