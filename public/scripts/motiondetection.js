@@ -63,7 +63,7 @@ main();
 
 var OneSignal = window.OneSignal || [];
 OneSignal.push(function() {
-  console.log("One signal")
+  console.log("One signal");
   OneSignal.init({
     appId: "6dae21b7-0408-466a-a60a-d8e7214aad38",
     notifyButton: {
@@ -71,3 +71,10 @@ OneSignal.push(function() {
     }
   });
 });
+
+OneSignal.push([
+  "addListenerForNotificationOpened",
+  function(event) {
+    console.log("OneSignal notification clicked:", event);
+  }
+]);
