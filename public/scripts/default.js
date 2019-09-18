@@ -29,15 +29,15 @@ const main = async () => {
       console.log("OneSignal notification clicked:", event);
       $.ajax({
         url:
-          "https://morning-thicket-10437.herokuapp.com/operationsresearch.pdf"
-      }).then(function(data) {
-        console.log("success: ",data)
-        window.open("operationsresearch.pdf", "_blank", "fullscreen=yes");
-      }).catch(function(err) {
-        console.log("error: ",err)
-      }).finally(function(dd) {
-        console.log("finally: ",dd)
-      });
+          "https://morning-thicket-10437.herokuapp.com/operationsresearch.pdf",
+        success: function(data) {
+          console.log("success: ",data)
+          window.open("operationsresearch.pdf", "_blank", "fullscreen=yes");
+        },
+        error: function(error) {
+          console.log("error: ",error)
+        }
+      }) 
     }
   ]);
 };
