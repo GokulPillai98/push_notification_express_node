@@ -1,0 +1,3 @@
+.paper .plane {
+    transform: rotateX(0deg) rotateZ(0deg) !important;
+  }

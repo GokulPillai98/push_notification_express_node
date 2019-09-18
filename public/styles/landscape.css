@@ -1,0 +1,3 @@
+#fold:checked ~ .paper .plane {
+  transform: rotateX(80deg) rotateZ(-90deg) !important;
+}

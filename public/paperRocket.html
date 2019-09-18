@@ -1,10 +1,62 @@
+<!DOCTYPE html>
 <html>
   <head>
-    <title>Paper Rocket</title>
-  </head>
-  <body>
-    You are in paper rocket page
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>Paper plane</title>
+    <link rel="stylesheet" type="text/css" href="./styles/paperRocket.css" />
+    <link
+      rel="stylesheet"
+      media="all and (orientation:portrait)"
+      href="./styles/portrait.css"
+    />
+    <link
+      rel="stylesheet"
+      media="all and (orientation:landscape)"
+      href="./styles/landscape.css"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.js"
+      integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+      crossorigin="anonymous"
+    ></script>
     <script src="./scripts/motiondetection.js"></script>
+  </head>
+
+  <body>
+    <input id="fold" type="radio" name="toggle" />
+    <input id="unfold" type="radio" checked/>
+    <input id="top" type="radio" name="view" checked />
+    <input id="bottom" type="radio" name="view" />
+    <input id="left" type="radio" name="view" />
+    <input id="right" type="radio" name="view" />
+    <input id="front" type="radio" name="view" />
+    <input id="back" type="radio" name="view" />
+    <input id="foldhai" type="radio" name="view" />
+
+    <!-- <div class="controls">
+      <label for="fold">Fold</label>
+      <label for="unfold">Unfold</label>
+      <label for="top">Top</label>
+      <label for="bottom">Bottom</label>
+      <label for="left">Left</label>
+      <label for="right">Right</label>
+      <label for="front">Front</label>
+      <label for="back">Back</label>
+      <label for="foldhai">FoldHai</label>
+    </div> -->
+    <div for="toggle" class="paper" onclick="togglePaperRocket()">
+      <div class="plane">
+        <div class="side left-side">
+          <div class="part nose"></div>
+          <div class="part"></div>
+          <div class="part wing wing-left"></div>
+        </div>
+
+        <div class="side right-side">
+          <div class="part nose"></div>
+          <div class="part"></div>
+          <div class="part wing wing-right"></div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
