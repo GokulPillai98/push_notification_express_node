@@ -23,23 +23,23 @@ const main = async () => {
     });
   });
 
-  OneSignal.push([
-    "addListenerForNotificationOpened",
-    function(event) {
-      console.log("OneSignal notification clicked:", event);
-      $.ajax({
-        url:
-          "https://morning-thicket-10437.herokuapp.com/operationsresearch.pdf",
-        success: function(data) {
-          console.log("success: ",data)
-          window.open("operationsresearch.pdf", "_blank", "fullscreen=yes");
-        },
-        error: function(error) {
-          console.log("error: ",error)
-        }
-      }) 
-    }
-  ]);
-};
+//   OneSignal.push([
+//     "addListenerForNotificationOpened",
+//     function(event) {
+//       console.log("OneSignal notification clicked:", event);
+//       $.ajax({
+//         url:
+//           "https://morning-thicket-10437.herokuapp.com/operationsresearch.pdf",
+//         success: function(data) {
+//           console.log("success: ",data)
+//           window.open("operationsresearch.pdf", "_blank", "fullscreen=yes");
+//         },
+//         error: function(error) {
+//           console.log("error: ",error)
+//         }
+//       }) 
+//     }
+//   ]);
+// };
 
-main();
+main()

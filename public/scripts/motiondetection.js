@@ -1,3 +1,5 @@
+var foldPaper = new Audio('./Page_Turn.mp3');
+var flyPlane = new Audio('./airland.mp3');
 function main() {
   var flag = 1;
   if (window.DeviceOrientationEvent) {
@@ -30,27 +32,26 @@ function main() {
       $("body").append("<p>" + moveCounter + "</p>");
       if (moveCounter > 4) {
         window.removeEventListener("devicemotion", handleMotion, false);
-        setTimeout(function() {
+        flyPlane.play();
           $(".plane").animate(
             {
               left: "-=1000px"
             },
             "100"
           );
-        }, 3000);
-
-        moveCounter = 0;
-        $.ajax({
-          url: "https://morning-thicket-10437.herokuapp.com/sendBrochure"
-        }).then(function(data) {
-          $("body").append("<p>brochure is ready</p>");
-        });
+          moveCounter = 0;
+        };
+        // $.ajax({
+        //   url: "https://morning-thicket-10437.herokuapp.com/sendBrochure"
+        // }).then(function(data) {
+        //   $("body").append("<p>brochure is ready</p>");
+        // });
       }
     }
   }
-}
 $(document).ready(main);
 function togglePaperRocket() {
+  foldPaper.play()
   if (!$("#fold").is(":checked")) {
     $("#fold").prop("checked", true);
   } else {
