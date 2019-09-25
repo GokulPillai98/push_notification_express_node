@@ -1,5 +1,5 @@
-var foldPaper = new Audio('./Page_Turn.mp3');
-var flyPlane = new Audio('./airland.mp3');
+var foldPaper = new Audio("./Page_Turn.mp3");
+var flyPlane = new Audio("./airland.mp3");
 function main() {
   var flag = 1;
   if (window.DeviceOrientationEvent) {
@@ -33,14 +33,13 @@ function main() {
       if (moveCounter > 4) {
         window.removeEventListener("devicemotion", handleMotion, false);
         flyPlane.play();
-          $(".plane").animate(
-            {
-              left: "-=1000px"
-            },
-            "100"
-          );
-          moveCounter = 0;
-        };
+        $(".plane").animate(
+          {
+            left: "-=1000px"
+          },
+          "100"
+        );
+        moveCounter = 0;
         $.ajax({
           url: "https://morning-thicket-10437.herokuapp.com/sendBrochure"
         }).then(function(data) {
@@ -49,9 +48,10 @@ function main() {
       }
     }
   }
+}
 $(document).ready(main);
 function togglePaperRocket() {
-  foldPaper.play()
+  foldPaper.play();
   if (!$("#fold").is(":checked")) {
     $("#fold").prop("checked", true);
   } else {
