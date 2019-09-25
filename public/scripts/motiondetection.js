@@ -41,11 +41,11 @@ function main() {
           );
           moveCounter = 0;
         };
-        // $.ajax({
-        //   url: "https://morning-thicket-10437.herokuapp.com/sendBrochure"
-        // }).then(function(data) {
-        //   $("body").append("<p>brochure is ready</p>");
-        // });
+        $.ajax({
+          url: "https://morning-thicket-10437.herokuapp.com/sendBrochure"
+        }).then(function(data) {
+          $("body").append("<p>brochure is ready</p>");
+        });
       }
     }
   }
