@@ -4,21 +4,28 @@ const PORT = process.env.PORT || 5000;
 const cors = require("cors");
 var fs = require("fs");
 var index = fs.readFileSync("./public/index.html");
-
-express()
+var paparRocket = fs.readFileSync("./public/paperRocket.html");
+const functions = require("firebase-functions");
+var app = express()
   .use(cors({ origin: true }))
   .use(express.static(path.join(__dirname, "public")))
   .set("view engine", "ejs")
   .get("/", (req, res) => {
+    console.log('code')
     res.writeHead(200, { "Content-Type": "text/html" });
     res.end(index);
+  })
+  .get("/paperRocket", (req, res) => {
+    console.log('code')
+    res.writeHead(200, { "Content-Type": "text/html" });
+    res.end(paparRocket);
   })
   .get("/sendBrochure", (req, res) => {
     console.log("Send Brochure");
     sendNotification(message);
     res.end(null);
   })
-  .listen(PORT, () => console.log(`Listening on ${PORT}`));
+  
 
 var sendNotification = function(data) {
   console.log(data,"send notification")
@@ -57,3 +64,6 @@ var message = {
   contents: { en: "English Message" },
   included_segments: ["All"]
 };
+
+
+exports.api = functions.https.onRequest(app);

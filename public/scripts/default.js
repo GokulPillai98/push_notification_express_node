@@ -22,7 +22,7 @@ const main = async () => {
       }
     });
   });
-
+}
 //   OneSignal.push([
 //     "addListenerForNotificationOpened",
 //     function(event) {
@@ -42,4 +42,4 @@ const main = async () => {
 //   ]);
 // };
 
-main()
+main();
